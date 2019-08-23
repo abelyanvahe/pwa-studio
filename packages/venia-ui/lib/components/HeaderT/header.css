@@ -1,0 +1,37 @@
+.root {
+    height: 150px;
+    /* background-color: rgb(var(--venia-grey));
+    box-shadow: 0 1px rgb(var(--venia-border)); */
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-row-gap: 0.5rem;
+    /* position: -webkit-sticky;
+    position: sticky; */
+    top: 0;
+    z-index: 10;
+}
+
+.open {
+    composes: root;
+}
+
+.closed {
+    composes: root;
+}
+.mainHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.searchbar {
+    display: flex;
+    vertical-align: middle
+}
+.menuList {
+    justify-content: end;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    font-size: 13px;
+}

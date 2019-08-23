@@ -1,0 +1,8 @@
+.root {
+    justify-self: self-end;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr  2fr 1fr;
+    cursor: pointer;
+    grid-gap: 5px
+}

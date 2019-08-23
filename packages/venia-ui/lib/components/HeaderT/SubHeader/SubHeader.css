@@ -1,0 +1,29 @@
+.root {
+    display:flex;
+    justify-content: space-between;
+    font-size: 13px;
+
+}
+.leftCorner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    justify-items: center;
+    align-items: center;
+   
+}
+.phone {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+.rightCorner {
+    display: flex;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.rightCorner img{
+    width:15px
+}
+.rightCorner span {
+    padding: 5px;
+    text-align: center
+}

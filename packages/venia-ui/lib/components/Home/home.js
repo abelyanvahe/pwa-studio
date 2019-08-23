@@ -28,6 +28,7 @@ class Home extends Component {
                     <p className="Home-saleBanner-copy">
                         <span>Sale on all shoes this weekend!</span>
                     </p>
+                    
                     <p className="Home-saleBanner-copy">
                         <span>Use promo code HAPPYFEET</span>
                     </p>

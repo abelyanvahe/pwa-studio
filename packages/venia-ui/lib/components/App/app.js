@@ -2,7 +2,7 @@ import React, { Fragment, useCallback, useEffect, useMemo } from 'react';
 import { array, bool, func, shape, string } from 'prop-types';
 
 import { HeadProvider, Title } from '../Head';
-import Main from '../Main';
+import Main from '../MainT';
 import Mask from '../Mask';
 import MiniCart from '../MiniCart';
 import Navigation from '../Navigation';
@@ -12,6 +12,9 @@ import ToastContainer from '../ToastContainer';
 import Icon from '../Icon';
 
 import { getToastId, useToasts } from '@magento/peregrine';
+
+import { mergeClasses } from '../../classify';
+import defaultClasses from './App.css';
 
 import {
     AlertCircle as AlertCircleIcon,
@@ -40,13 +43,13 @@ const App = props => {
     const reload = useCallback(
         process.env.NODE_ENV === 'development'
             ? () => {
-                  console.log(
-                      'Default window.location.reload() error handler not running in developer mode.'
-                  );
-              }
+                console.log(
+                    'Default window.location.reload() error handler not running in developer mode.'
+                );
+            }
             : () => {
-                  window.location.reload();
-              },
+                window.location.reload();
+            },
         []
     );
 
@@ -89,7 +92,7 @@ const App = props => {
     const { app, closeDrawer } = props;
     const { drawer, hasBeenOffline, isOnline, overlay } = app;
     const cartIsOpen = drawer === 'cart';
-
+    const classes = mergeClasses(defaultClasses, props.classes)
     useEffect(() => {
         if (hasBeenOffline) {
             if (isOnline) {
@@ -123,18 +126,21 @@ const App = props => {
 
     return (
         <HeadProvider>
-            <Title>{'Home Page - Venia'}</Title>
-            <Main
-                isMasked={overlay}
-                hasBeenOffline={hasBeenOffline}
-                isOnline={isOnline}
-            >
-                {renderRoutes()}
-            </Main>
-            <Mask isActive={overlay} dismiss={closeDrawer} />
-            <Navigation />
-            <MiniCart isOpen={cartIsOpen} />
-            <ToastContainer />
+            <div  className={classes.root}>
+                <Title>{'Home Page - Venia'}</Title>
+                <Main
+                    isMasked={overlay}
+                    hasBeenOffline={hasBeenOffline}
+                    isOnline={isOnline}
+                >
+                    {renderRoutes()}
+                </Main>
+                {/* <Mask isActive={overlay} dismiss={closeDrawer} /> */}
+                <Navigation />
+                {/* <MiniCart isOpen={cartIsOpen} /> */}
+                <ToastContainer />
+            </div>
+
         </HeadProvider>
     );
 };
