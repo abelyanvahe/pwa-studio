@@ -16,6 +16,8 @@ import defaultClasses from './header.css';
 import MenuList from './MenuList';
 import SubHeader from './SubHeader';
 import MiniCart from '../MiniCartT';
+import CartContent from './CartContent';
+import SignInTrigger from './SignInTrigger';
 // const SearchBar = React.lazy(() => import('../SearchBar'));
 
 const Header = props => {
@@ -63,12 +65,17 @@ const Header = props => {
                     <MenuList
                         menu1='Account'
                         menu2='Wishlist'
-                        menu3='Log In'
+                        menu3={<SignInTrigger />}
                     />
-                 
-                        <CartTrigger {...cartTriggerProps} />
-                        {/* <MiniCart isOpen={true}/> */}
-              
+                    <div className={classes.CartTrigger}>
+                        <div className={classes.cartIcon}>
+                            <CartTrigger {...cartTriggerProps} />
+                        </div>
+
+                        <div className={classes.miniCart}>
+                            <MiniCart isOpen={true} />
+                        </div>
+                    </div>
                 </div>
                 <Suspense fallback={searchOpen ? suspenseFallback : null}>
                     <Route

@@ -133,6 +133,7 @@ async function configureWebpack({ context, vendor = [], special = {}, env }) {
                     oneOf: [
                         {
                             test: [paths.src, ...hasFlag('cssModules')],
+                            exclude: /node_modules| owl/,
                             use: [
                                 'style-loader',
                                 {
@@ -180,6 +181,11 @@ async function configureWebpack({ context, vendor = [], special = {}, env }) {
             }
         }),
         plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery'
+            }),
             new RootComponentsPlugin({
                 rootComponentsDirs: [
                     ...hasFlag('rootComponents'),

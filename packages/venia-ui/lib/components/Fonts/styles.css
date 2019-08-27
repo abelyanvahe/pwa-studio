@@ -39,50 +39,62 @@
 }
 
 .icon_down_open_mini:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\61";
 }
 .icon_shopping_cart:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\62";
 }
 .icon_angle_left:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\63";
 }
 .icon_phone:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\63";
 }
 .icon_angle_left:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\66";
 }
 .icon_angle_right:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\67";
 }
 .icon_clone:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\64";
 }
 .icon_bars:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\65";
 }
 .icon_color_mode:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\68";
 }
 .icon_paint_brush:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\69";
 }
 .icon_mobile:before {
-  font-family: "untitled-font-1" !important;
+  font-family: "untitled-font-1";
   content: "\6a";
 }
-.icon_heart_o:before {
-  font-family: "untitled-font-1" !important;
+.iconvheart_o:before {
+  font-family: "untitled-font-1";
   content: "\6b";
+}
+.icon_cart_plus:before {
+  font-family: "untitled-font-1";
+  content: "\6c";
+}
+.icon_user:before {
+  font-family: "untitled-font-1";
+  content: "\6d";
+}
+.icon_user_plus:before {
+  font-family: "untitled-font-1";
+  content: "\6e";
 }

@@ -6,11 +6,11 @@ const MenuList = props => {
     const classes = mergeClasses(defaultClasses, props.classes)
     return (
         <div className={classes.TitleList}>
-            <span><a href="pp">{menu1}</a></span>
+            <span>{menu1}</span>
             <span>
-                <a href="pp">{menu2}</a></span>
+                {menu2}</span>
             <span>
-                <a href="pp">{menu3}</a>
+                {menu3}
             </span>
         </div>
     );

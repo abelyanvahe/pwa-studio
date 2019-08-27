@@ -98,5 +98,6 @@
       "path": "./packages/venia-concept/dist/js/[0-9]-*.js",
       "maxSize": "100 kB"
     }
-  ]
+  ],
+  "dependencies": {}
 }

@@ -10,7 +10,7 @@ import renderRoutes from './renderRoutes';
 import errorRecord from '../../util/createErrorRecord';
 import ToastContainer from '../ToastContainer';
 import Icon from '../Icon';
-
+import SignIn from '../SignIn';
 import { getToastId, useToasts } from '@magento/peregrine';
 
 import { mergeClasses } from '../../classify';
@@ -92,6 +92,7 @@ const App = props => {
     const { app, closeDrawer } = props;
     const { drawer, hasBeenOffline, isOnline, overlay } = app;
     const cartIsOpen = drawer === 'cart';
+    const signInIsOpen = drawer === 'signIn'
     const classes = mergeClasses(defaultClasses, props.classes)
     useEffect(() => {
         if (hasBeenOffline) {
@@ -135,9 +136,10 @@ const App = props => {
                 >
                     {renderRoutes()}
                 </Main>
-                {/* <Mask isActive={overlay} dismiss={closeDrawer} /> */}
+                <Mask isActive={overlay} dismiss={closeDrawer} />
                 <Navigation />
-                {/* <MiniCart isOpen={cartIsOpen} /> */}
+                <MiniCart isOpen={cartIsOpen} />
+                <SignIn isOpen = {signInIsOpen}/>
                 <ToastContainer />
             </div>
 

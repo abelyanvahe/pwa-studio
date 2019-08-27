@@ -35,3 +35,41 @@
     align-items: center;
     font-size: 13px;
 }
+.CartTrigger {
+    text-align:  -webkit-center;
+    background-color: white;
+}
+.miniCart {
+    display: none;
+    position: absolute;
+    top: 116px;
+    right: 0;
+    /* z-index: -1; */
+}
+.CartTrigger:hover .miniCart{
+    display: block;
+}
+
+.cartIcon {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    z-index: 0;
+}
+
+.CartTrigger:hover .cartIcon{
+    box-shadow: 0 -9px 16px rgba(0,0,0, 0.15);
+    z-index: 1;
+    background-color: #ffffff;
+    border-bottom: none;
+}
+
+.signIn {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+}

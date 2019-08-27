@@ -24,14 +24,15 @@ const SignIn = props => {
         showCreateAccount,
         showForgotPassword,
         signIn,
-        signInError
+        signInError,
+        isOpen
     } = props;
 
     const formRef = useRef(null);
     const classes = mergeClasses(defaultClasses, props.classes);
     const hasError = signInError && Object.keys(signInError).length;
     const errorMessage = hasError ? ERROR_MESSAGE : null;
-
+    const rootClass = isOpen ? classes.root_open : classes.root;
     const handleSubmit = useCallback(
         ({ email: username, password }) => {
             signIn({ username, password });
@@ -67,29 +68,33 @@ const SignIn = props => {
             </div>
         );
     }
-
     return (
-        <div className={classes.root}>
+        <div className={rootClass}>
             <Form
                 ref={formRef}
                 className={classes.form}
                 onSubmit={handleSubmit}
             >
-                <Field label="Email" required={true}>
-                    <TextInput
-                        autoComplete="email"
-                        field="email"
-                        validate={isRequired}
-                    />
-                </Field>
-                <Field label="Password" required={true}>
-                    <TextInput
-                        autoComplete="current-password"
-                        field="password"
-                        type="password"
-                        validate={isRequired}
-                    />
-                </Field>
+                <div>
+                    <Field label="Email" required={true}>
+                        <TextInput
+                            autoComplete="email"
+                            field="email"
+                            validate={isRequired}
+                        />
+                    </Field>
+                </div>
+                <div>
+                    <Field label="Password" required={true}>
+                        <TextInput
+                            autoComplete="current-password"
+                            field="password"
+                            type="password"
+                            validate={isRequired}
+                        />
+                    </Field>
+                </div>
+
                 <div className={classes.signInError}>{errorMessage}</div>
                 <div className={classes.signInButton}>
                     <Button priority="high" type="submit">
@@ -106,8 +111,9 @@ const SignIn = props => {
                     {'Forgot Password?'}
                 </Button>
             </div>
-            <div className={classes.signInDivider} />
+            
             <div className={classes.createAccountButton}>
+            <div className={classes.signInDivider} />
                 <Button
                     priority="normal"
                     type="button"
