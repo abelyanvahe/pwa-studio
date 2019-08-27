@@ -99,5 +99,8 @@
       "maxSize": "100 kB"
     }
   ],
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "~3.4.1",
+    "react-owl-carousel": "~2.3.1"
+  }
 }

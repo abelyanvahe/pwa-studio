@@ -1,27 +1,56 @@
-// import React from 'react';
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-// const Carousel = () => {
-//     return (
-//         <div>
-//             <OwlCarousel
-//                 className="owl-theme"
-//                 loop
-//                 margin={10}
-//                 nav
-//             >
-//                 <div class="item"><h4>1</h4></div>
-//                 <div class="item"><h4>2</h4></div>
-//                 <div class="item"><h4>3</h4></div>
-//                 <div class="item"><h4>4</h4></div>
-//                 <div class="item"><h4>5</h4></div>
-//                 <div class="item"><h4>6</h4></div>
-//                 <div class="item"><h4>7</h4></div>
-//                 <div class="item"><h4>8</h4></div>
-//             </OwlCarousel>
-//         </div>
-//     );
-// }
-// export default Carousel;
+
+
+import React from 'react';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import GalleryItem from '../GalleryT/item';
+
+class Carousel extends React.Component {
+    constructor(props) {
+        super(props); 
+        this.ref = React.createRef();
+    }
+    next = () => {
+        return this.ref.current.next()
+    }
+    prev = () => {
+        return this.ref.current.prev()
+    }
+    
+    render() {
+        const { 
+                products, 
+                item,  
+                autoplay, 
+                autoplayTimeout, 
+            } = this.props;
+        return (
+            <OwlCarousel
+                className="owl-theme owl-nav"
+                loop
+                items={item}
+                margin={10}
+                ref={this.ref}
+                next
+                prev
+                autoplay={autoplay}
+                autoplayTimeout={autoplayTimeout}
+                rewind
+            >
+                {
+                    products.map(item =>
+                        <div key={item.id} >
+                            <GalleryItem
+                                item={item}
+                            />
+                        </div>
+                    )
+                }
+            </OwlCarousel>
+        );
+    }
+}
+
+export default Carousel;

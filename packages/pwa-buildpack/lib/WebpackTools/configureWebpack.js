@@ -161,7 +161,7 @@ async function configureWebpack({ context, vendor = [], special = {}, env }) {
                     ]
                 },
                 {
-                    test: /\.(jpg|svg|eot|ttf|woff)$/,
+                    test: /\.(jpg|svg|eot|ttf|woff|video.play.png)$/,
                     use: [
                         {
                             loader: 'file-loader',

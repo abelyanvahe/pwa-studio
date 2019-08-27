@@ -82,7 +82,7 @@
   font-family: "untitled-font-1";
   content: "\6a";
 }
-.iconvheart_o:before {
+.icon_heart_o:before {
   font-family: "untitled-font-1";
   content: "\6b";
 }
@@ -97,4 +97,16 @@
 .icon_user_plus:before {
   font-family: "untitled-font-1";
   content: "\6e";
+}
+.icon_fax:before {
+  font-family: "untitled-font-1";
+  content: "\6f";
+}
+.icon_envelope_o:before {
+  font-family: "untitled-font-1";
+  content: "\70";
+}
+.icon_skype:before {
+  font-family: "untitled-font-1";
+  content: "\71";
 }

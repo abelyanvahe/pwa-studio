@@ -1,0 +1,27 @@
+.titleContent {
+    display: flex;
+    justify-content: space-between
+}
+.buttonGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+}
+.buttonGroup button {
+    background-color: #f5f5f5;
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    outline-style: none
+}
+.buttonGroup button:hover {
+    background-color: black;
+    color:white;
+    transition-duration: 1000ms;
+}

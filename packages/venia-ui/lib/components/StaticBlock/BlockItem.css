@@ -1,0 +1,54 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 200px;
+    grid-column-gap: 5px;
+}
+.root:hover .iconOverlap{
+    border: 4px solid #5bd2ec;
+    transition: 500ms
+}
+.root:hover .iconStyle{
+    background-color: #5bd2ec;
+    transition: 500ms
+}
+.iconOverlap {
+    display:flex;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid white;
+    justify-content: center;
+    align-items: center;
+}
+.iconStyle {
+    width: 80px;
+    height: 80px;
+    background-color: #de2666;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.iconStyle :first-child {
+    font-size: 30px
+}
+.leftSide {
+    display: flex;
+    justify-content: center
+}
+
+.rightSide h4 {
+    color: grey;
+    font-size: small;
+    padding: 10px 0;
+}
+.rightSide h1{
+    font-weight: 600;
+}
+.rightSide p {
+    padding: 10px 0;
+    line-height: 25px;
+    font-size: 14px;
+}
