@@ -3,14 +3,14 @@ import { mergeClasses } from '../../classify';
 import defaultClasses from './Review.css';
 
 const Review = (props) => {
-    const { review,rating_summary } = props;
+    const { review,ratingSummary } = props;
     const classes = mergeClasses(defaultClasses, props.classes)
     return (
         <div className={classes.root}>
             <div className={classes.rating_box}>
                 <div 
                     className={classes.rating} 
-                    style={{width:`${rating_summary}%`}}
+                    style={{width:`${ratingSummary}%`}}
                 />
             </div>
             <div>

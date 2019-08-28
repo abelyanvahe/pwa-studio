@@ -1,0 +1,77 @@
+/* Nav bar not exp */
+.root {
+    align-items: stretch;
+    display: flex;
+    /* height: 3.5rem;
+    padding: 0 1.25rem; */
+    width: 100%;
+    cursor: pointer;
+   
+}
+.text {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    /* padding: 0 0.25rem; */
+    position: relative;
+    color: #333333;
+    font-weight: bold;
+    /* font-size: 20px; */
+    line-height: 47px;  
+    padding: 8px 18px;
+}
+
+.arrowDown {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-top: 0px;
+}
+.hello {
+    color: red;
+}
+.childTag {
+    display: none;
+    position: absolute;
+    z-index: 9999; 
+    background: #ffffff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19);
+    min-width: 230px;
+    margin-top: 63px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.root:hover > .childTag{
+    display: block;
+}
+
+.childTag  ul  {
+    /* margin-top: 50px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19);
+    font-weight: 400;
+    min-width: 230px;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 1; */
+    padding: 0;
+    margin-left: 0;
+}
+.childTag  ul li {
+    transition-duration: 0.2s;
+}
+
+.childTag  ul li:hover {
+    background-color: #f0f0f0;
+    padding-left: 5px;
+}
+
+.position_2 {
+
+}
+.position_3 {
+    margin-left: 225px;
+    margin-top: 0px
+}

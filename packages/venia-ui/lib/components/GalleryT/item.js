@@ -80,7 +80,7 @@ class GalleryItem extends Component {
                     <div >
                         <Review 
                             review={reviews_count}
-                            rating_summary={rating_summary}
+                            ratingSummary={rating_summary}
                         />
                     </div>
                     <div className={classes.price}>

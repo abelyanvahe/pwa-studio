@@ -1,0 +1,14 @@
+
+nav > div > ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+nav > div > ul > li:hover {
+    background-color: #5bd2ec;
+    color: #fff;
+}
+
+nav > div > ul > li:hover > a {
+    color: #fff;
+}

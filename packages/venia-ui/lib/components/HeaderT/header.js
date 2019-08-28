@@ -18,6 +18,8 @@ import SubHeader from './SubHeader';
 import MiniCart from '../MiniCartT';
 import CartContent from './CartContent';
 import SignInTrigger from './SignInTrigger';
+
+
 // const SearchBar = React.lazy(() => import('../SearchBar'));
 
 const Header = props => {
@@ -88,7 +90,11 @@ const Header = props => {
                         )}
                     />
                 </Suspense>
+
+                <div className={classes.navDesktop}>
+                </div>
             </div>
+
         </header>
     );
 };
