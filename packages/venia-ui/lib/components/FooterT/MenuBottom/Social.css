@@ -1,0 +1,19 @@
+.root {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 4px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: #c1bdbd;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 2px;
+    font-size: larger;
+}
+.icon:hover {
+    background-color: #ff7214;
+}

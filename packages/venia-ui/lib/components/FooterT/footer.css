@@ -1,0 +1,58 @@
+.footer_Container {
+    background-color: #f5f5f5;
+}
+.footer_Container2 {
+    background-image: url(http://ultimo.infortis-themes.com/demo/media/wysiwyg/infortis/ultimo/_patterns/default/1.png);
+}
+.footer_Container3{
+    background-repeat: repeat;
+    background-position: center top;
+    background-attachment: scroll;
+}
+.corefooterContent {
+    max-width: 1280px;
+    margin:0 auto;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    margin-top: 10px
+}
+.footerContent {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    background-color: white;
+    padding: 40px;
+    height: 440px;
+}
+.footerMenu {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+}
+.footerMenu > div {
+    height: 300px;
+}
+.copyright {
+    display: block;
+    color: rgb(var(--venia-text-alt));
+    font-size: 0.75rem;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+.secondaryFooter {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 30px;
+    font-size: smaller;
+}
+.footerBottom {
+    color:white;
+    background-color: black;
+    height: 100px;
+}
+.BottomContent {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 35px;
+}

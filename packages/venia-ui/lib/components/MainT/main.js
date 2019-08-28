@@ -3,7 +3,7 @@ import { bool, shape, string } from 'prop-types';
 import { useScrollLock } from '@magento/peregrine';
 
 import { mergeClasses } from '../../classify';
-import Footer from '../Footer';
+import Footer from '../FooterT';
 import Header from '../HeaderT';
 import defaultClasses from './main.css';
 
@@ -18,8 +18,11 @@ const Main = props => {
 
     return (
         <main className={rootClass}>
-            <Header hasBeenOffline={hasBeenOffline} isOnline={isOnline} />
-            <div className={pageClass}>{children}</div>
+                <Header
+                    hasBeenOffline={hasBeenOffline}
+                    isOnline={isOnline}
+                />
+            <div className={`${pageClass} ${classes.corePage}`}>{children}</div>
             <Footer />
         </main>
     );

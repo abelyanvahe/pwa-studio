@@ -82,7 +82,7 @@
   font-family: "untitled-font-1";
   content: "\6a";
 }
-.icon_heart_o:before {
+.icon-heart-o:before {
   font-family: "untitled-font-1";
   content: "\6b";
 }
@@ -109,4 +109,32 @@
 .icon_skype:before {
   font-family: "untitled-font-1";
   content: "\71";
+}
+.icon_facebook:before {
+  font-family: "untitled-font-1";
+  content: "\72";
+}
+.icon_google_plus:before {
+  font-family: "untitled-font-1";
+  content: "\73";
+}
+.icon_twitter:before {
+  font-family: "untitled-font-1";
+  content: "\74";
+}
+.icon_youtube_play:before {
+  font-family: "untitled-font-1";
+  content: "\75";
+}
+.icon_vk:before {
+  font-family: "untitled-font-1";
+  content: "\76";
+}
+.icon_instagram:before {
+  font-family: "untitled-font-1";
+  content: "\77";
+}
+.icon_pinterest_p:before {
+  font-family: "untitled-font-1";
+  content: "\78";
 }

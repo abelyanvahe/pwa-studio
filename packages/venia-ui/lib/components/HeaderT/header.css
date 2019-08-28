@@ -1,4 +1,6 @@
 .root {
+    max-width: 1280px !important;
+    margin: 0 auto !important;
     height: 150px;
     /* background-color: rgb(var(--venia-grey));
     box-shadow: 0 1px rgb(var(--venia-border)); */

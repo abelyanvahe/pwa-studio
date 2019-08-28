@@ -1,0 +1,22 @@
+
+.content {
+    display: grid;
+    padding-left: 5px; 
+    padding-top: 25px;  
+}
+.item {
+    display: grid;
+    grid-template-columns: 0.25fr 2fr;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: lighter
+}
+
+ .item:hover .icon{
+    padding-left: 10px;
+    transition: 700ms
+ }
+ .item:hover .name{
+    color:#5bd2ec;
+ }

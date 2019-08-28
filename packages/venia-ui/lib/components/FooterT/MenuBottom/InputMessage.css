@@ -1,0 +1,39 @@
+.root{
+    display:block
+}
+
+form h2 {
+    line-height: 30px;
+    margin: 0 5px 0px 0;
+}
+form > div {
+    display:flex;
+    justify-content: center
+}
+.inputBox {
+    margin: 0 5px 0px 0;
+    position: relative;
+}
+.inputBox input{
+    border:1px solid lightgray;
+    line-height: 25px;
+    outline-style: none;
+    padding: 0 10px;
+
+}
+.inputBox input:hover{
+    border:1px solid grey;
+    transition: 700ms
+}
+.submitButton {
+    background-color: #e5e5e5;
+    color: #555555;
+    padding: 0px 18px;
+    font-size: 18px;
+}
+.submitButton:hover{
+    background-color: #5bd2ec;
+    color:white;
+    transition: 400ms;
+    font-weight: bolder
+}
