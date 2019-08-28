@@ -48,7 +48,6 @@ const ProductCarousel = props => {
         return fullPageLoadingIndicator
     }
     const ref = createRef();
-    console.log(data)
     return data && typeof (data.products.items) != 'undefined' ? (
         <>
             <CarouselHeader
@@ -66,6 +65,5 @@ const ProductCarousel = props => {
         </>
     ) : fullPageLoadingIndicator;
 }
-
 export default ProductCarousel;
 
