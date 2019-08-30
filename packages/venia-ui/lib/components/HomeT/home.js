@@ -7,7 +7,6 @@ import Brands from '../Brands';
 import Slideshow from '../Slideshows/Slideshows';
 import Navigation from '../NavigationDesktop';
 
-
 let slides = [
     {
       id:1,
