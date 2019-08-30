@@ -7,7 +7,7 @@ import { Title } from '../../components/Head';
 import { addItemToCart } from '../../actions/cart';
 import ErrorView from '../../components/ErrorView';
 import { fullPageLoadingIndicator } from '../../components/LoadingIndicator';
-import ProductFullDetail from '../../components/ProductFullDetail';
+import ProductFullDetail from '../../components/ProductFullDetailT';
 import getUrlKey from '../../util/getUrlKey';
 import productQuery from '../../queries/getProductDetail.graphql';
 
@@ -54,7 +54,7 @@ class Product extends Component {
                     if (loading) return fullPageLoadingIndicator;
 
                     const product = data.productDetail.items[0];
-
+                        console.log(data)
                     if (!product) {
                         return <ErrorView outOfStock={true} />;
                     }

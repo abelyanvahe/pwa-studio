@@ -1,0 +1,90 @@
+.root{
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    grid-row-gap: 30px;
+}
+.form{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 50px;
+}
+.imageCarousel {
+}
+.content {
+
+}
+.content h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+.Review {
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+}
+.Review span {
+    margin: 5px;
+}
+.text {
+    font-size: 15px;
+    line-height: normal;
+}
+.price {
+    color:#00a9c7;
+    font-size: xx-large;
+    line-height: initial;
+}
+.cartActions {
+    display: flex;
+    margin-top: 20px;
+}
+.addToCartButton{
+    background-color: #333333;
+    color: #ffffff;
+    line-height: 55px;
+    min-width: 200px;
+    outline: none;
+    font-size: large;
+    font-weight: bold;
+    transition-duration: 992ms;
+}
+.addToCartButton:hover {
+    background-color: #00a9c7;
+}
+.quantity {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+.quantityValue {
+    display: flex;
+    align-items: center;
+}
+.buttonGroup {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 5px;
+}
+.customStyle {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    line-height: inherit;
+}
+.up {
+    composes: buttonStyle from '../ProductImageCarouselT/carousel.css';
+    composes: customStyle;
+}
+.down {
+    composes: buttonStyle from '../ProductImageCarouselT/carousel.css';
+    composes: customStyle;
+}
+.up:hover .down:hover {
+    background-color: black;
+    color:white;
+    outline: none;
+}

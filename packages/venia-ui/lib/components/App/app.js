@@ -137,7 +137,7 @@ const App = props => {
                     {renderRoutes()}
                 </Main>
                 <Mask isActive={overlay} dismiss={closeDrawer} />
-                {/* <Navigation /> */}
+                <Navigation />
                 {/* <MiniCart isOpen={cartIsOpen} /> */}
                 <SignIn isOpen = {signInIsOpen}/>
                 <ToastContainer />

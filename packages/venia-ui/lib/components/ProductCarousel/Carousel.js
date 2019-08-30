@@ -35,6 +35,7 @@ class Carousel extends React.Component {
                 autoplay={autoplay}
                 autoplayTimeout={autoplayTimeout}
                 rewind
+                slideBy='3'
             >
                 {
                     products.map(item =>

@@ -36,7 +36,7 @@ const Thumbnail = props => {
             })
             : transparentPlaceholder;
 
-        return isDesktop ? (
+        return  (
                     <Image
                         alt={label}
                         classes={{ root: classes.image }}
@@ -44,7 +44,7 @@ const Thumbnail = props => {
                         src={src}
                     />
 
-        ) : null;
+        ) ;
     }, [file, isDesktop, label, classes.image]);
 
     const handleClick = useCallback(() => {
@@ -52,15 +52,12 @@ const Thumbnail = props => {
     }, [onClickHandler, itemIndex]);
 
     return (
-
-        <button
+        <div
             onClick={handleClick}
             className={isActive ? classes.rootSelected : classes.root}
         >
             {thumbnailImage}
-        </button>
-
-
+        </div>
     );
 };
 
