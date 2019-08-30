@@ -127,7 +127,7 @@ class Home extends Component {
         const classes = mergeClasses(defaultClasses, this.props.classes)
         return (
             <div className={classes.root}>
-              <Navigation />
+              {/* <Navigation /> */}
                <Slideshow 
                     slides={slides}
                     autoplay={false}
