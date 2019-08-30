@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link, withRouter } from '@magento/venia-drivers';
 import defaultClasses from './categoryLeaf.css';
+const urlSuffix = '.html';
 
 const Branch = (props) => {
     const [ tagIndex, setTagIndex ] = useState(null)
     const { name, branches, urlPath, path, level } = props;   
     const activeClistStyle = (url, index) => {
-        props.history.push(url)
+        props.history.push(`${url}${urlSuffix}`)
     }
     const positionLevel = `position_${level}`;
     return (
@@ -22,8 +23,9 @@ const Branch = (props) => {
 
             <div className={`${defaultClasses.childTag} ${defaultClasses[positionLevel]}`}>
             {branches.map(item => {
+                
                 if(path.split('/').includes(item.key)) {
-                    
+         
                     return item
                 }
             })}

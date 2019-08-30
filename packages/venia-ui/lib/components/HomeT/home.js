@@ -7,6 +7,7 @@ import Brands from '../Brands';
 import Slideshow from '../Slideshows/Slideshows';
 import Navigation from '../NavigationDesktop';
 
+
 let slides = [
     {
       id:1,
@@ -127,7 +128,7 @@ class Home extends Component {
         const classes = mergeClasses(defaultClasses, this.props.classes)
         return (
             <div className={classes.root}>
-              {/* <Navigation /> */}
+              <Navigation />
                <Slideshow 
                     slides={slides}
                     autoplay={false}

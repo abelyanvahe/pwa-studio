@@ -3,6 +3,7 @@ import { Link } from '@magento/venia-drivers';
 import { func, shape, string } from 'prop-types';
 
 import defaultClasses from './categoryLeaf.css';
+const urlSuffix = '.html';
 
 class Leaf extends Component {
     static propTypes = {
@@ -18,7 +19,7 @@ class Leaf extends Component {
         return (
             <Link
                 className={defaultClasses.root}
-                to={`/${urlPath}`}
+                to={`/${urlPath}${urlSuffix}`}
             >
                 <span className={defaultClasses.text}>
                     {name}  
