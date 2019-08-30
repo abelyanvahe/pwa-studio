@@ -3,13 +3,13 @@ import { mergeClasses } from '../../../classify';
 import defaultClasses from './Social.css';
 import * as icons from '../../Fonts/styles.css'
 const IconsData = [
-    { name: icons.icon_twitter },
-    { name: icons.icon_facebook },
-    { name: icons.icon_google_plus },
-    { name: icons.icon_youtube_play },
-    { name: icons.icon_instagram },
-    { name: icons.icon_pinterest_p },
-    { name: icons.icon_vk }
+    { id:1, name: icons.icon_twitter },
+    { id:2, name: icons.icon_facebook },
+    { id:3, name: icons.icon_google_plus },
+    { id:4, name: icons.icon_youtube_play },
+    { id:5, name: icons.icon_instagram },
+    { id:6, name: icons.icon_pinterest_p },
+    { id:7, name: icons.icon_vk }
 ]
 const Social = props => {
     const classes = mergeClasses(defaultClasses, props.classes);
@@ -17,7 +17,7 @@ const Social = props => {
         <div className={classes.root}>
             {
                 IconsData.map(icon =>
-                    <div className={classes.icon}>
+                    <div className={classes.icon} key={icon.id}>
                         <span className={icon.name} />
                     </div>
                 )
@@ -25,5 +25,4 @@ const Social = props => {
         </div>
     );
 }
-
 export default Social

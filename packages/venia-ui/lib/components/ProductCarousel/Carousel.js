@@ -9,7 +9,7 @@ import GalleryItem from '../GalleryT/item';
 
 class Carousel extends React.Component {
     constructor(props) {
-        super(props); 
+        super(props);
         this.ref = React.createRef();
     }
     next = () => {
@@ -18,14 +18,13 @@ class Carousel extends React.Component {
     prev = () => {
         return this.ref.current.prev()
     }
-    
     render() {
-        const { 
-                products, 
-                item,  
-                autoplay, 
-                autoplayTimeout, 
-            } = this.props;
+        const {
+            products,
+            item,
+            autoplay,
+            autoplayTimeout,
+        } = this.props;
         return (
             <OwlCarousel
                 className="owl-theme owl-nav"
@@ -33,8 +32,6 @@ class Carousel extends React.Component {
                 items={item}
                 margin={10}
                 ref={this.ref}
-                next
-                prev
                 autoplay={autoplay}
                 autoplayTimeout={autoplayTimeout}
                 rewind

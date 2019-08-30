@@ -67,7 +67,6 @@ class GalleryItem extends Component {
 
         const { name, price, url_key, reviews_count, rating_summary } = item;
         const productLink = `/${url_key}${productUrlSuffix}`;
-        console.log('data', item)
         return (
             <div className={classes.root}>
                     <Link to={resourceUrl(productLink)} className={classes.images}>
