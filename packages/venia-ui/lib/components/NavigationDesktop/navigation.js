@@ -3,7 +3,7 @@ import { func, shape, string } from 'prop-types';
 import CategoryTree from './categoryTree';
 import defaultClasses from './navigation.css';
 
-class Navigation extends PureComponent {
+class Navigation extends React.Component {
     // static propTypes = {
     //     getAllCategories: func.isRequired,
     // };
@@ -15,7 +15,6 @@ class Navigation extends PureComponent {
     //             rootNodeId: props.rootCategoryId
     //         };
     //     }
-
     //     return state;
     // }
     // componentDidMount() {
@@ -73,17 +72,15 @@ class Navigation extends PureComponent {
         // const {
         //     rootNodeId
         // } = state;
-   
+        console.log(this.props, 'props in Navigation')
         return (
             <aside>
-                {/* <nav className={defaultClasses.body}>
+                <nav className={defaultClasses.body}>
                     {categoryTree}
-                </nav> */}
-                nscjkdncjkd
+                </nav>
             </aside>
         );
     }
 }
 
 export default Navigation
-

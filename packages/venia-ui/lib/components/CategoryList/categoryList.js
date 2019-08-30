@@ -29,8 +29,6 @@ class CategoryList extends Component {
             </div>
         ) : null;
     }
-
-    // map Magento 2.3.1 schema changes to Venia 2.0.0 proptype shape to maintain backwards compatibility
     mapCategory(categoryItem) {
         const { items } = categoryItem.productImagePreview;
         return {

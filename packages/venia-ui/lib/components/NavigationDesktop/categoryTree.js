@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { func, number, objectOf, shape } from 'prop-types';
+import { func, number, objectOf, shape, string } from 'prop-types';
 
 import { Query } from '@magento/venia-drivers';
 import LoadingIndicator from '../LoadingIndicator';
@@ -105,6 +105,7 @@ class Tree extends Component {
 
     render() {
         const { leaves } = this;
+
         return (
             <div className={defaultClasses.root}>
                 <ul className={defaultClasses.tree}>{leaves} </ul>

@@ -1,10 +1,10 @@
 import { connect } from '@magento/venia-drivers';
-import { closeDrawer } from '../../actions/app';
+// import { closeDrawer } from '../../actions/app';
 import { getAllCategories } from '../../actions/catalog';
 
 import Navigation from './navigation';
 
-const mapStateToProps = ({ catalog }) => {
+const mapStateToProps = ({ catalog, user }) => {
     const { categories, rootCategoryId } = catalog;
     return {
         categories,
@@ -13,7 +13,7 @@ const mapStateToProps = ({ catalog }) => {
 };
 
 const mapDispatchToProps = {
-    closeDrawer,
+    // closeDrawer,
     getAllCategories,
 };
 
